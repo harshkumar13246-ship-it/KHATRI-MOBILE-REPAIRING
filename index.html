@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Khatri Pay Booth | Mobile Repair in Ranchi</title>
+
+<meta name="description" content="Khatri Pay Booth provides mobile repair, battery replacement, smart appliance repair, TWS earphones and accessories in Indrapuri, Ranchi. Call 9304076680.">
+
+<meta name="keywords" content="Mobile Repair Ranchi, Phone Repair Indrapuri, TWS Earphones Ranchi, Battery Replacement Ranchi">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* GENERAL */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#0f172a;
+color:white;
+line-height:1.6;
+}
+
+/* TOP BAR */
+.top-bar{
+background:#22c55e;
+text-align:center;
+padding:8px;
+font-weight:600;
+}
+
+/* NAVBAR */
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+background:linear-gradient(90deg,#0f172a,#1e3a8a);
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+nav h2{
+font-weight:600;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:30px;
+}
+
+nav ul li a{
+text-decoration:none;
+color:white;
+transition:0.3s;
+}
+
+nav ul li a:hover{
+color:#38bdf8;
+}
+
+.menu-toggle{
+display:none;
+font-size:28px;
+cursor:pointer;
+}
+
+.nav-btn{
+background:#3b82f6;
+padding:10px 20px;
+border-radius:6px;
+text-decoration:none;
+color:white;
+transition:0.3s;
+}
+
+.nav-btn:hover{
+background:#2563eb;
+}
+
+/* HERO */
+.hero{
+padding:120px 8%;
+background:
+linear-gradient(to right, rgba(15,23,42,0.95), rgba(30,58,138,0.85)),
+url('repairs.jpg');
+background-size:cover;
+background-position:center;
+}
+
+.hero h1{
+font-size:48px;
+margin-bottom:20px;
+}
+
+.hero p{
+max-width:600px;
+margin-bottom:30px;
+color:#cbd5e1;
+}
+
+.hero-buttons a{
+padding:12px 28px;
+border-radius:6px;
+text-decoration:none;
+margin-right:15px;
+font-weight:600;
+transition:0.3s;
+}
+
+.call-btn{
+background:#22c55e;
+color:white;
+}
+
+.call-btn:hover{
+transform:translateY(-3px);
+}
+
+.quote-btn{
+border:2px solid white;
+color:white;
+}
+
+.quote-btn:hover{
+background:white;
+color:#0f172a;
+}
+
+/* SERVICES */
+section{
+padding:100px 8%;
+text-align:center;
+}
+
+.service-box{
+display:flex;
+gap:30px;
+flex-wrap:wrap;
+justify-content:center;
+margin-top:50px;
+}
+
+.card{
+background:#1e293b;
+padding:30px;
+border-radius:12px;
+width:300px;
+transition:0.4s;
+box-shadow:0 10px 25px rgba(0,0,0,0.4);
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+/* GALLERY */
+.gallery-box{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+justify-content:center;
+margin-top:40px;
+}
+
+.gallery-box img{
+width:300px;
+border-radius:15px;
+box-shadow:0 15px 30px rgba(0,0,0,0.4);
+transition:0.4s;
+}
+
+.gallery-box img:hover{
+transform:scale(1.05);
+}
+
+/* TESTIMONIALS */
+.testimonials{
+background:#1e293b;
+}
+
+.review-box{
+display:flex;
+gap:30px;
+flex-wrap:wrap;
+justify-content:center;
+margin-top:40px;
+}
+
+.review{
+background:#0f172a;
+padding:30px;
+border-radius:12px;
+width:320px;
+}
+
+/* CONTACT */
+.contact{
+display:flex;
+gap:50px;
+flex-wrap:wrap;
+text-align:left;
+}
+
+.contact-info{
+flex:1;
+}
+
+.contact-form{
+flex:1;
+background:#1e293b;
+padding:30px;
+border-radius:10px;
+}
+
+.contact-form input,
+.contact-form textarea{
+width:100%;
+padding:12px;
+margin:10px 0;
+border:none;
+border-radius:6px;
+}
+
+.contact-form button{
+background:#3b82f6;
+color:white;
+padding:12px;
+border:none;
+border-radius:6px;
+cursor:pointer;
+}
+
+/* MAP */
+iframe{
+width:100%;
+height:300px;
+border-radius:12px;
+margin-top:30px;
+}
+
+/* WHATSAPP */
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:14px 20px;
+border-radius:50px;
+text-decoration:none;
+font-weight:600;
+}
+
+/* FOOTER */
+footer{
+background:#1e293b;
+text-align:center;
+padding:20px;
+}
+
+/* ANIMATION */
+.hidden{
+opacity:0;
+transform:translateY(40px);
+transition:1s;
+}
+
+.show{
+opacity:1;
+transform:translateY(0);
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+nav ul{
+display:none;
+flex-direction:column;
+background:#1e293b;
+position:absolute;
+top:70px;
+right:0;
+width:200px;
+padding:20px;
+}
+
+nav ul.active{
+display:flex;
+}
+
+.menu-toggle{
+display:block;
+}
+
+.hero h1{
+font-size:30px;
+}
+
+.contact{
+flex-direction:column;
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="top-bar">
+📞 Call/WhatsApp: 9304076680
+</div>
+
+<nav>
+<h2>Khatri Pay Booth</h2>
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+<ul id="menu">
+<li><a href="#">Home</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#gallery">Gallery</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+<section class="hero">
+<h1>Fast & Reliable Mobile Repair Services in Ranchi</h1>
+<p>We repair smartphones, smart appliances and sell TWS earphones, cables and phone accessories at affordable prices.</p>
+
+<div class="hero-buttons">
+<a href="tel:9304076680" class="call-btn">Call Now</a>
+<a href="#contact" class="quote-btn">Get Free Quote</a>
+</div>
+</section>
+
+<section id="services">
+<h2>Our Services</h2>
+<div class="service-box">
+<div class="card hidden">
+<h3>Mobile Repair</h3>
+<p>Screen replacement, software fix, motherboard repair.</p>
+</div>
+<div class="card hidden">
+<h3>Battery Replacement</h3>
+<p>Original batteries with warranty support.</p>
+</div>
+<div class="card hidden">
+<h3>Accessories</h3>
+<p>TWS Earphones, chargers, cables, cases & more.</p>
+</div>
+</div>
+</section>
+
+<section id="gallery">
+<h2>Our Shop & Work</h2>
+<div class="gallery-box">
+<img src="shop1.jpg">
+<img src="shop2.jpg">
+<img src="repairs.jpg">
+</div>
+</section>
+
+<section class="testimonials">
+<h2>Customer Reviews</h2>
+<div class="review-box">
+<div class="review">
+<p>"Very fast service and reasonable price."</p>
+<h4>- Rajesh Kumar</h4>
+</div>
+<div class="review">
+<p>"Best mobile repair shop in Indrapuri."</p>
+<h4>- Priya Sharma</h4>
+</div>
+</div>
+</section>
+
+<section id="contact">
+<h2>Contact Us</h2>
+
+<div class="contact">
+<div class="contact-info">
+<p><strong>Owner:</strong> Ramesh Kumar Khatri</p>
+<p><strong>Phone:</strong> +91 9304076680</p>
+<p><strong>Email:</strong> harshkumar13246@gmail.com</p>
+<p><strong>Location:</strong> Indrapuri, Ratu Road No.11, Ranchi, Jharkhand, India</p>
+
+<iframe src="https://www.google.com/maps?q=Ratu+Road+Ranchi&output=embed"></iframe>
+</div>
+
+<div class="contact-form">
+<h3>Send Message</h3>
+<input type="text" placeholder="Your Name">
+<input type="email" placeholder="Your Email">
+<textarea rows="4" placeholder="Your Message"></textarea>
+<button>Send Message</button>
+</div>
+</div>
+</section>
+
+<a href="https://wa.me/919304076680" class="whatsapp">WhatsApp</a>
+
+<footer>
+© 2026 Khatri Pay Booth | All Rights Reserved
+</footer>
+
+<script>
+
+function toggleMenu(){
+document.getElementById("menu").classList.toggle("active");
+}
+
+const observer = new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add("show");
+}
+});
+});
+
+document.querySelectorAll(".hidden").forEach(el=>{
+observer.observe(el);
+});
+
+</script>
+
+</body>
+</html>
